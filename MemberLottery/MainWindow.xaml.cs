@@ -42,7 +42,9 @@ namespace MemberLottery
                 textLastUser.Dispatcher.BeginInvoke(new Action(() =>
                 {
                     textLastUser.Text = $"{textItem.Text}: {s}";
-                    MessageBox.Show($"恭喜 {s} 抽中了 {textItem.Text}", "抽选结果");
+                    var messageDialog = new MessageDialog();
+                    messageDialog.Owner = this;
+                    messageDialog.ShowDialog($"恭喜 {s} 抽中了 {textItem.Text}");
                 }));
             };
 
@@ -175,7 +177,9 @@ namespace MemberLottery
 
                 if (string.IsNullOrEmpty(textUid.Text))
                 {
-                    MessageBox.Show("请输入UID", "UID无效");
+                    var messageDialog = new MessageDialog();
+                    messageDialog.Owner = this;
+                    messageDialog.ShowDialog("请输入UID");
                 }
 
                 try
@@ -198,14 +202,17 @@ namespace MemberLottery
                         listUsers.Items.Add(i);
                     }
                     UpdateCount();
-                    MessageBox.Show($"共获得 {info?.Name} 的舰长 {selectedList.Count()} 个", "拉取成功");
                 }
                 catch
                 {
                     listUsers.Items.Clear();
-                    MessageBox.Show("未找到指定用户, 请检查UID", "UID无效");
+                    var messageDialog = new MessageDialog();
+                    messageDialog.Owner = this;
+                    messageDialog.ShowDialog("未找到指定用户, 请检查UID");
                 }
             };
+
+            
         }
 
 

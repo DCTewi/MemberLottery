@@ -15,4 +15,11 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Compile Update="InputDialog - 复制.xaml.cs">
+      <DependentUpon>InputDialog.xaml.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
 </Project>

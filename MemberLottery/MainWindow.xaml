@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MemberLottery"
         mc:Ignorable="d"
-        Title="舰长抽选 v1.0 by DCTewi" Height="500" Width="700">
+        Title="舰长抽奖机 v1.0 by DCTewi" Height="500" Width="700">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
